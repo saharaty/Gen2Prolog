@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "scanned_files": [
+    "LICENSES.md",
+    "README.md",
+    ".gitignore",
+    "SHA256SUMS",
+    "Gen2Prolog_GitHub_Ready.zip"
+  ],
+  "payloads": 4173,
+  "archives": 24,
+  "findings": [],
+  "retained_public_contact": "Published upstream TM-align contact address",
+  "public_identity": "Repository owner username is present in the intended GitHub URLs",
+  "archive_sha256": "09af77ec7310ecd5a51c5436cfc61c1c13700a74d67d0711d2d3345dee727c6c",
+  "compact_archive": {
+    "name": "Gen2Prolog_Research_1.0.2.tar.xz",
+    "sha256": "1e916a22cbc074151015272f20e066105306a959cfb8df30f3b23f85c9f8d662",
+    "file_count": 3704,
+    "payload_verification": "Every file matches the already privacy-checked distribution by SHA-256",
+    "archive_metadata": "Owner names omitted and numeric owner IDs set to zero"
+  }
+}

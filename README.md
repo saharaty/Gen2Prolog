@@ -2,7 +2,7 @@
 
 Gen2Prolog is an MSc research project on natural-language-to-Prolog translation and evidence-based screening of generated protein candidates. It connects source requirements, computational observations and SWI-Prolog verdicts so that each decision can be inspected.
 
-**[Download the complete research package](https://github.com/saharaty/Gen2Prolog/releases/download/research-1.0.2/Gen2Prolog_GitHub_Ready.zip)** · **[Research release and checks](https://github.com/saharaty/Gen2Prolog/releases/tag/research-1.0.2)** · [Attribution and licensing](LICENSES.md)
+**[Download the complete research package](https://github.com/saharaty/Gen2Prolog/releases/download/research-1.0.2/Gen2Prolog_Research_1.0.2.tar.xz)** · **[Research release and checks](https://github.com/saharaty/Gen2Prolog/releases/tag/research-1.0.2)** · [Attribution and licensing](LICENSES.md)
 
 The complete source, datasets, protocols, tests, evidence and saved results are distributed together in the release archive. This repository's main branch provides the project overview and distribution information. Extract the archive to browse the complete project and follow the relative links in its documentation.
 
@@ -51,9 +51,9 @@ Install Python and SWI-Prolog, then download and extract the research package:
 ```sh
 download_dir="$(mktemp -d)"
 curl -L --fail \
-  https://github.com/saharaty/Gen2Prolog/releases/download/research-1.0.2/Gen2Prolog_GitHub_Ready.zip \
-  -o "$download_dir/Gen2Prolog_GitHub_Ready.zip"
-unzip -q "$download_dir/Gen2Prolog_GitHub_Ready.zip" -d "$download_dir"
+  https://github.com/saharaty/Gen2Prolog/releases/download/research-1.0.2/Gen2Prolog_Research_1.0.2.tar.xz \
+  -o "$download_dir/Gen2Prolog_Research_1.0.2.tar.xz"
+tar -xJf "$download_dir/Gen2Prolog_Research_1.0.2.tar.xz" -C "$download_dir"
 cd "$download_dir/Gen2Prolog"
 export PYTHONDONTWRITEBYTECODE=1
 runtime="$PWD/01_source_code/Gen2Prolog_Reproducible_1.0.2"
@@ -72,10 +72,10 @@ python3 -B "$runtime/reproduce.py" full --output "$research_runs/full"
 
 Both screening modes use local files and require no paid API calls. Fresh historical LLM runs require separate credentials and incur provider costs.
 
-The release ZIP's SHA-256 is:
+The release archive's SHA-256 is:
 
 ```text
-09af77ec7310ecd5a51c5436cfc61c1c13700a74d67d0711d2d3345dee727c6c
+1e916a22cbc074151015272f20e066105306a959cfb8df30f3b23f85c9f8d662
 ```
 
 ## Inspect the pipeline
