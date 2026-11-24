@@ -2,15 +2,15 @@
 
 Gen2Prolog is an MSc research project on natural-language-to-Prolog translation and evidence-based screening of generated protein candidates. It connects source requirements, computational observations and SWI-Prolog verdicts so that each decision can be inspected.
 
-**[Download the complete research package](https://github.com/saharaty/Gen2Prolog/releases/download/research-1.0.2/Gen2Prolog_Research_1.0.2.tar.xz)** · **[Research release and checks](https://github.com/saharaty/Gen2Prolog/releases/tag/research-1.0.2)** · [Attribution and licensing](LICENSES.md)
+**[Download the Phase 2 screening package](https://github.com/saharaty/Gen2Prolog/releases/download/research-1.0.2/Gen2Prolog_Screening_Public_1.0.2.tar.xz)** · **[Research release and checks](https://github.com/saharaty/Gen2Prolog/releases/tag/research-1.0.2)** · [Attribution and licensing](LICENSES.md)
 
-The complete source, datasets, protocols, tests, evidence and saved results are distributed together in the release archive. This repository's main branch provides the project overview and distribution information. Extract the archive to browse the complete project and follow the relative links in its documentation.
+The Phase 2 source, campaign datasets, protocols, tests, evidence and saved results are distributed together in the release archive. The historical Phase 1 directory is withheld because permission to redistribute Talk2Prolog has not been established. Phase 1 reproduction is therefore not provided by this public package. This repository's main branch provides the project overview and distribution information. Extract the archive to browse the complete project and follow the relative links in its documentation.
 
 ## Research scope
 
 | Study | Method | Archived evidence |
 |---|---|---|
-| Phase 1 — general English-to-Prolog translation | Four LLM configurations and four prompting strategies, using individual sentences and complete Talk2Prolog scenarios | Code, prompt templates, model outputs, reference-agreement scores and Prolog execution diagnostics |
+| Phase 1 — general English-to-Prolog translation | Four LLM configurations and four prompting strategies, using individual sentences and complete Talk2Prolog scenarios | Historical experiment described here; files withheld pending redistribution permission |
 | Phase 2 — protein-candidate screening | Frozen target-specific protocols connected to existing sequences, structures and computational evidence | EvidenceRecords, real SWI-Prolog verdicts, candidate flags, tests and reproduction receipts |
 
 The biological protocols were prepared offline through preprocessing and GPT-assisted translation. Recovered instructions and audit workbooks preserve source mappings and interpretation decisions. The extent of independent human semantic review remains unverified. Screening starts from the frozen protocols and existing candidates.
@@ -51,9 +51,9 @@ Install Python and SWI-Prolog, then download and extract the research package:
 ```sh
 download_dir="$(mktemp -d)"
 curl -L --fail \
-  https://github.com/saharaty/Gen2Prolog/releases/download/research-1.0.2/Gen2Prolog_Research_1.0.2.tar.xz \
-  -o "$download_dir/Gen2Prolog_Research_1.0.2.tar.xz"
-tar -xJf "$download_dir/Gen2Prolog_Research_1.0.2.tar.xz" -C "$download_dir"
+  https://github.com/saharaty/Gen2Prolog/releases/download/research-1.0.2/Gen2Prolog_Screening_Public_1.0.2.tar.xz \
+  -o "$download_dir/Gen2Prolog_Screening_Public_1.0.2.tar.xz"
+tar -xJf "$download_dir/Gen2Prolog_Screening_Public_1.0.2.tar.xz" -C "$download_dir"
 cd "$download_dir/Gen2Prolog"
 export PYTHONDONTWRITEBYTECODE=1
 runtime="$PWD/01_source_code/Gen2Prolog_Reproducible_1.0.2"
@@ -70,12 +70,12 @@ To regenerate native measurements, evidence and verdicts on the verified platfor
 python3 -B "$runtime/reproduce.py" full --output "$research_runs/full"
 ```
 
-Both screening modes use local files and require no paid API calls. Fresh historical LLM runs require separate credentials and incur provider costs.
+Both screening modes use local files and require no paid API calls. The withheld historical Phase 1 experiment is not reproducible from this public distribution.
 
 The release archive's SHA-256 is:
 
 ```text
-1e916a22cbc074151015272f20e066105306a959cfb8df30f3b23f85c9f8d662
+b2f827a2c5e3c88f44a598b83e8ae8b283ac153384d6173f371e71fe3c4148f9
 ```
 
 ## Inspect the pipeline
@@ -107,7 +107,7 @@ After extraction, open `01_source_code/Gen2Prolog_Reproducible_1.0.2/Start_Here.
 
 | Folder | Contents |
 |---|---|
-| `01_source_code/` | Frozen runtime, native sources, Phase 1 benchmark code and outputs |
+| `01_source_code/` | Frozen Phase 2 runtime and native sources; a Phase 1 exclusion notice |
 | `02_configuration/` | Configuration and binding guide |
 | `03_external_data/` | Published input data guide |
 | `04_original_prompts/` | Campaign specification guide |
@@ -142,4 +142,4 @@ The package retains saved replay and full-recomputation receipts. Reproduction, 
 
 The thesis contribution includes the LLM benchmark extension, evidence-processing and symbolic screening implementation, and software evaluation. Talk2Prolog and its benchmark originate in Laura Fuciarelli's preceding work. Anthropic supplied the original design prompts, candidates, predicted complexes and campaign experiments. External tools retain their authorship and terms.
 
-The included publisher license specifies CC BY 4.0 for campaign data and documentation. The USalign license is retained. A license for the project's own code has not been assigned, and redistribution permission for the historical benchmark remains unverified. See [licensing notes](LICENSES.md). No new reuse permissions are implied by this repository.
+The included publisher license specifies CC BY 4.0 for campaign data and documentation. The USalign license is retained. A license for the project's own code has not been assigned. The entire historical Phase 1 directory is excluded from the public screening archive because Talk2Prolog redistribution permission has not been established. See [licensing notes](LICENSES.md). No new reuse permissions are implied by this repository.

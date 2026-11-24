@@ -1,23 +1,17 @@
 {
-  "status": "PASS",
-  "scanned_files": [
-    "LICENSES.md",
-    "README.md",
-    ".gitignore",
-    "SHA256SUMS",
-    "Gen2Prolog_GitHub_Ready.zip"
+  "date": "2026-11-24",
+  "status": "PASS_FOR_INSPECTED_PATTERNS",
+  "archive": "Gen2Prolog_Screening_Public_1.0.2.tar.xz",
+  "sha256": "b2f827a2c5e3c88f44a598b83e8ae8b283ac153384d6173f371e71fe3c4148f9",
+  "payloads_inspected_including_nested_zip_members": 4013,
+  "checked_patterns": [
+    "Provider and GitHub token prefixes",
+    "AWS access key IDs",
+    "Private key blocks",
+    "Personal home-directory paths"
   ],
-  "payloads": 4173,
-  "archives": 24,
-  "findings": [],
-  "retained_public_contact": "Published upstream TM-align contact address",
-  "public_identity": "Repository owner username is present in the intended GitHub URLs",
-  "archive_sha256": "09af77ec7310ecd5a51c5436cfc61c1c13700a74d67d0711d2d3345dee727c6c",
-  "compact_archive": {
-    "name": "Gen2Prolog_Research_1.0.2.tar.xz",
-    "sha256": "1e916a22cbc074151015272f20e066105306a959cfb8df30f3b23f85c9f8d662",
-    "file_count": 3704,
-    "payload_verification": "Every file matches the already privacy-checked distribution by SHA-256",
-    "archive_metadata": "Owner names omitted and numeric owner IDs set to zero"
-  }
+  "pattern_findings": [],
+  "prior_review": "Retained original payloads were previously reviewed for personal emails and credential assignments; that earlier full distribution is now withdrawn.",
+  "scope": "Historical Phase 1 files withheld. See PUBLIC_DISTRIBUTION_CHECK.json.",
+  "limitations": "Pattern inspection is not a guarantee that no sensitive information can exist. Public repository identity and upstream attribution are retained."
 }
